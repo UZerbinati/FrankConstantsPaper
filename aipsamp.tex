@@ -136,12 +136,12 @@ Lastly, the conservation of the total kinetic energy is a direct consequence of 
 information
 While at first, it might not appear obvious there are interesting consequences of the above observation. Not only the order parameters can come into play only through the inertia tensor, but for this reason the microscopic mechanism resulting in macroscopic anisotropic behavior in a calamitic fluid near the thermodynamical equilibrium is only determined by the geometrical about the calamitic constituents encoded in the inertia tensor.
 \section{Needle-like molecules}
-In Ref.~\onlinecite{FRZ23} a particular case of the energy \eqref{eq:OseenFrankGen} was considered in greater detail, i.e. the case of needle-like molecules for which the inertia tensor can be written as
+In Ref.~\onlinecite{FRZ23} a particular case of the energy \eqref{eq:OseenFrankGen} was considered in greater detail, i.e. the case of needle-like cilindircal molecules for which the inertia tensor can be written as
 \begin{equation}
   \label{eq:InertiaTensor}
-  \mathbb{I} = \lambda(I-\vec{n}\times \vec{n}),
+  \mathbb{I} \approx \lambda(I-\vec{n}\times \vec{n}),
 \end{equation}
-where $K\approx \mathcal{O}(\frac{1}{12}h^2)$ for a needle-like molecule of length $h$ and $\vec{n}$ is the usual nematic director field.
+where $K\approx \mathcal{O}(\gamma h^2)$ for a needle-like molecule of length $h$ and $\vec{n}$ is the usual nematic director field. Under the assumption that the molecule is cylindrical we can use $\gamma\approx \frac{1}{12}$.
 Under this hypothesis and using the Maxwell-Boltzmann distribution \eqref{eq:MaxwellBoltzmann} to evaluate the energy \eqref{eq:OseenFrankGen} near the thermodynamical equilibrium, it was shown\cite{FRZ23} that $\mathcal{I}$ can be written as
 \begin{equation}
   \label{eq:OseenFrankOne}
@@ -164,7 +164,31 @@ Using \eqref{eq:FrankConstant} we can provide a rough estimate for $K$, i.e.
 \end{equation}
 This value is in good agreement with the experimental value for which $K_1\approx 0.7\cdot 10^{-6}\,\text{dyn}$, $K_2\approx 0.43\cdot 10^{-6}\,\text{dyn}$ and $K_3\approx 1.7 \cdot 10^{-6}\,\text{dyn}$\cite{dGJ}.
 
-We now consider N-(4-methoxybenzylidene)-4-butylaniline (MBBA), which is another calamitic molecule known to form a nematic phase at room temperature. MBBA can be considered as a needle-like molecule with a length $h\approx 50 \overset{\circ}{A}$ if regarded as a rigid cylindrical body\cite{CRB71}.
-At atmospheric pressure, MBBA forms a nematic phase from $20\,C^\circ$ to $47\,C^\circ$, therefore 
-\bibliography{aipsamp}% Produces the bibliography via BibTeX.
+We now consider N-(4-methoxybenzylidene)-4-butylaniline (MBBA), which is another calamitic molecule known to form a nematic phase at room temperature. MBBA can be considered as a needle-like molecule with a length $h\approx 70 \overset{\circ}{A}$ if regarded as a rigid cylindrical body\cite{CRB71}.
+At atmospheric pressure, MBBA forms a nematic phase from $20\,C^\circ$ to $47\,C^\circ$, therefore using \eqref{eq:FrankConstant} we can provide a rough estimate for $K$, i.e.
+\begin{equation}
+  K_{MBBA} \approx 408.3 \cdot 1.01\cdot 10^{-15} \,\text{N}\approx 4.12\cdot 10^{-8} \, \text{dyn}. 
+\end{equation}
+
+Lastly, we consider 4-pentyl-4'-cyanobiphenyl (5CB), which can be regarded as a needle-like molecule with height $h\approx 20 \overset{\circ}{A}$\cite{Z} which forms a nematic phase from $22.5\,C^\circ$ to $35\,C^\circ$ at atmospheric pressure.
+Hence once again using \eqref{eq:FrankConstant} we can provide a rough estimate for $K$, i.e.
+\begin{equation}
+  K_{5CB} \approx 33.3 \cdot 1.01\cdot 10^{-15} \,\text{N}\approx 3.3\cdot 10^{-8} \, \text{dyn}.
+\end{equation}
+
+\begin{figure}
+  \includegraphics[scale=0.4]{Figures/PAA}\\
+  \includegraphics[scale=0.11]{Figures/MBBA}
+  \includegraphics[scale=0.085]{Figures/5CB}
+  \caption{In this figure are depicted the chemical structure of PAA, MBBA and 5CB liquid crystal.}
+\end{figure}
+
+While for PAA, \eqref{eq:FrankConstant} provided a good one constant approximation of Frank's constants, the same can not be concluded for MBBA and 5CB for which \eqref{eq:FrankConstant} understimates the Frank constant by one order of magnitude.
+Looking at Figure \ref{fig:chem} a possible explanation come to mind, i.e. while the chemical structure of PAA seems to be almost head-to-tail symmetric and therefore we can regard it as a needle-like cylinder the same can not be said for MBBA and 5CB.
+One idea can be to regard MBBA and 5CB as needle-like cones, where the adjective needle-like refers to the fact that we assume \eqref{eq:InertiaTensor} still holds, yet since we are assuming the molecule has a cone shape $\gamma\approx\frac{3}{5}$.
+Using this assumption we obtain,
+\begin{equation}
+  K_{MBBA} \approx 3.7 \cdot 10^{-7}\,\text{dyn}, \qquad K_{5CB}\approx 2.9\cdot 10^{-7}\,\text{dyn}.
+\end{equation}
+\bibliography{aipsamp}
 \end{document}

@@ -180,20 +180,28 @@ Hence once again using \eqref{eq:FrankConstant} we can provide a rough estimate 
   \includegraphics[scale=0.4]{Figures/PAA}\\
   \includegraphics[scale=0.11]{Figures/MBBA}
   \includegraphics[scale=0.085]{Figures/5CB}
-  \caption{In this figure are depicted the chemical structure of PAA, MBBA and 5CB liquid crystal.}
+  \caption{In this figure are depicted the chemical structure of PAA, MBBA, and 5CB liquid crystal.}
 \end{figure}
 
 While for PAA, \eqref{eq:FrankConstant} provided a good one constant approximation of Frank's constants, the same can not be concluded for MBBA and 5CB for which \eqref{eq:FrankConstant} understimates the Frank constant by one order of magnitude.
-Looking at Figure \ref{fig:chem} a possible explanation come to mind, i.e. while the chemical structure of PAA seems to be almost head-to-tail symmetric and therefore we can regard it as a needle-like cylinder the same can not be said for MBBA and 5CB.
+Looking at Figure \ref{fig:chem} a possible explanation comes to mind, i.e. while the chemical structure of PAA seems to be almost head-to-tail symmetric and therefore we can regard it as a needle-like cylinder the same can not be said for MBBA and 5CB.
 One idea can be to regard MBBA and 5CB as needle-like cones, where the adjective needle-like refers to the fact that we assume \eqref{eq:InertiaTensor} still holds, yet since we are assuming the molecule has a cone shape $\gamma\approx\frac{3}{5}$.
 Using this assumption we obtain,
 \begin{equation}
   K_{MBBA} \approx 3.7 \cdot 10^{-7}\,\text{dyn}, \qquad K_{5CB}\approx 2.9\cdot 10^{-7}\,\text{dyn}.
 \end{equation}
-These values are more inline with the experimental measure of Frank's constants for MBBA, for which $K_1 \approx 5.3 \cdot 10^{-7}\,\text{dyn}$, $K_2 \approx 2.2 \cdot 10^{-7}\,\text{dyn}$, $7.5\cdot 10^{-7}\, \text{dyn}$\cite{dGJ}, and 5CB for which $K_1\approx 3.5\cdot 10^{-7}\,\text{dyn}$ and $K_3\approx 4.15\cdot 10^{-7}\,\text{dyn}$\cite{BRBF85}.
+These values are more in line with the experimental measure of Frank's constants for MBBA, for which $K_1 \approx 5.3 \cdot 10^{-7}\,\text{dyn}$, $K_2 \approx 2.2 \cdot 10^{-7}\,\text{dyn}$, $7.5\cdot 10^{-7}\, \text{dyn}$\cite{dGJ}, and 5CB for which $K_1\approx 3.5\cdot 10^{-7}\,\text{dyn}$ and $K_3\approx 4.15\cdot 10^{-7}\,\text{dyn}$\cite{BRBF85}.
 \section{Pressure and Temperature dependence}
-An interesting consequence of \eqref{eq:FrankConstant} is that the it predicts that Frank constant will increase lienarly with the pressure. A positive correlation between Frank's constants and pressure has been observed also experimentally\cite{SBF87}, in particular the experimental data presented in Ref. \cite{PRPH12} we can confirm the linear dependence describe by \eqref{eq:FrankConstant}, for the beding and splay constants.
+An interesting consequence of \eqref{eq:FrankConstant} is that it predicts that the Frank constant will increase linearly with the pressure. A positive correlation between Frank's constants and pressure has been observed also experimentally\cite{SBF87}, in particular the experimental data presented in Ref. \cite{PRPH12} we can confirm the linear dependence describe by \eqref{eq:FrankConstant}, for the beding and splay constants.
 
-On the other hand it is a well-known fact that the magnitude of the Frank constants decrease as the temperature increases\cite{dGJ,G73}.
+On the other hand, it is a well-known fact that the magnitude of the Frank constants decreases as the temperature increases\cite{dGJ,G73}.
+The different behaviors between temperature and pressure reveal an issue with the qualitative behavior expressed in \eqref{eq:FrankConstant}.
+If one has to believe the ideal gas law, which was derived in Ref.~\onlinecite{FRZ23} from the kinetic theory of calamitic fluids, the pressure and temperature are positively related by the equation of state
+\begin{equation}
+  p = R \rho T. 
+\end{equation}
+Since our study of the Frank constant is performed at a low Mach number, we can assume that the density $\rho$ is constant, hence the pressure and temperature are linearly related, hence as the temperature increases we should also see an increase in the pressure resulting in a greater value for the one-constant approximation.
+This is in contrast with the experimental data, which shows that the Frank constants decrease as the temperature increases.
+Two comment are to be made, first of all, it is well known that the ideal gas law fails to capture the behavior of many calamitic fluids\cite{YV78}. A common cure in statistical mechanics is to resort to a virial series to express the equation of state, i.e.
 \bibliography{aipsamp}
 \end{document}

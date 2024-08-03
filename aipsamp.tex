@@ -63,7 +63,7 @@
 
 \preprint{AIP/123-QED}
 
-\title[]{A Kinetic interpretation of the Frank's constant in calamitic fluids}
+\title[]{A kinetic interpretation of the Frank's constants in calamitic fluids}
 % Force line breaks with \\
 \author{U. Zerbinati}
  %\altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
@@ -181,6 +181,7 @@ Hence once again using \eqref{eq:FrankConstant} we can provide a rough estimate 
   \includegraphics[scale=0.11]{Figures/MBBA}
   \includegraphics[scale=0.085]{Figures/5CB}
   \caption{In this figure are depicted the chemical structure of PAA, MBBA, and 5CB liquid crystal.}
+  \label{fig:chem}
 \end{figure}
 
 While for PAA, \eqref{eq:FrankConstant} provided a good one constant approximation of Frank's constants, the same can not be concluded for MBBA and 5CB for which \eqref{eq:FrankConstant} understimates the Frank constant by one order of magnitude.
@@ -200,8 +201,37 @@ If one has to believe the ideal gas law, which was derived in Ref.~\onlinecite{F
 \begin{equation}
   p = R \rho T. 
 \end{equation}
-Since our study of the Frank constant is performed at a low Mach number, we can assume that the density $\rho$ is constant, hence the pressure and temperature are linearly related, hence as the temperature increases we should also see an increase in the pressure resulting in a greater value for the one-constant approximation.
+Since most studies of the Frank constant are performed at a low Mach number, we can assume that the density $\rho$ is constant, hence the pressure and temperature are linearly related, hence as the temperature increases we should also see an increase in the pressure resulting in a greater value for the one-constant approximation.
 This is in contrast with the experimental data, which shows that the Frank constants decrease as the temperature increases.
-Two comment are to be made, first of all, it is well known that the ideal gas law fails to capture the behavior of many calamitic fluids\cite{YV78}. A common cure in statistical mechanics is to resort to a virial series to express the equation of state, i.e.
+Two comments are to be made, first of all, it is well known that the ideal gas law fails to capture the behavior of many calamitic fluids\cite{YV78}. A common cure in statistical mechanics is to resort to a virial series to express the equation of state, i.e.
+\begin{equation}
+  \label{eq:virialExp}
+  Z \coloneqq \frac{\beta p}{\rho} = 1 + \sum_{n=2}^\infty B_n\rho^n
+\end{equation}
+where $T$ is the temperature, $\rho$ the density and $\beta$ is defined as $\beta^{-1}\coloneq k_B T$ with $K_B$ being the Boltzmann constant.
+The compressibility factor $Z$ expresses the deviation of a fluid from an ideal gas.
+Since the compressibility factor and the coefficients $B_n$ are positive, it seems that \eqref{eq:virialExp} still dictates that even for a generalized equation of state as the temperature increases the pressure must increase as well. Therefore by \eqref{eq:FrankConstant} we should also observe an increase in the one constant approximation $K$.
+Although \eqref{eq:virialExp} seems to be predicting a positive correlation between temperature and the one-constant $K$, multiplying \eqref{eq:virialExp} by the speed of sound $c$ we obtain
+\begin{equation}
+  Zc = \beta p \kappa_S = c + \sum_{n=2}B_n\rho^nc, \label{eq:compressibility}
+\end{equation}
+where $\kappa_S$ is the isoentropic compressibility. What \eqref{eq:compressibility} indicates that if the speed of sound is sufficiently large as it is in classical liquid crystal not only the nearly stationary regime are in the low Mach number regime but also the correlation between pressure, temperature and density can be neglected.
+Hence with respect to their elastic behavior, we can treat liquid crystals as incompressible and consider the pressure as a Lagrange multiplier enforcing the fact that the density $\rho$ remains constant, hence decoupling the pressure from the temperature.
+While \eqref{eq:FrankConstant} might still fail to capture the negative correlation between the temperature $T$ and the one-constant $K$, at least we know that in nearly incompressible fluids $K$ is not positively related to the temperature.
+
+We would like to remark that the incompressibility assumption seems to be valid only at the microscopic length scale, which is the length scale that characterizes the elastic behaviour of the fluid.
+In fact, at smaller length scales, such as the acoustic length scale, it is well known that liquid crystals can not be treated as incompressible since sound waves can propagate in such media\cite{MLS72}.
+Interestingly enough theory based on an equation of state of the form of \eqref{eq:virialExp} has been very successful in explaining sound behavior in liquid crystal\cite{V09}.
+In particular, in Ref.~\onlinecite{V09} the author bases his theory of nematoacoustic effects on the assumption that liquid crystals are Korteweg fluids hence they obey van der Waals equation of state, which via Taylor expansion can be recasted as 
+\begin{equation}
+  Z = 1 + (b-a\beta) \rho + \sum_{n=2}^\infty b^n\rho^n,
+\end{equation}
+where $a$ and $b$ are constants respectively expressing respectively the strength of molecular interactions and the excluded volume effects.
+
+A primitive explanation for the negative correlation between the temperature $T$ and the one-constant $K$ can be attributed to microscopic changes in the molecular shape.
+Intuitively one can imagine that at higger temperatures in order to maximize the entropy the length of the chemical bond in the calamitic fluid constituent is shortened, resulting in a smaller value of the geometric quantity $\lambda$ that inturns affects the value of $K$.
+Yet this mechanics remain to be fully understood by the authors and can only be labelled as a conjecture for the moment being.
+
+\section{Mean Square Distortion}
 \bibliography{aipsamp}
 \end{document}

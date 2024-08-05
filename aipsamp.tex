@@ -230,8 +230,48 @@ where $a$ and $b$ are constants respectively expressing respectively the strengt
 
 A primitive explanation for the negative correlation between the temperature $T$ and the one-constant $K$ can be attributed to microscopic changes in the molecular shape.
 Intuitively one can imagine that at higger temperatures in order to maximize the entropy the length of the chemical bond in the calamitic fluid constituent is shortened, resulting in a smaller value of the geometric quantity $\lambda$ that inturns affects the value of $K$.
-Yet this mechanics remain to be fully understood by the authors and can only be labelled as a conjecture for the moment being.
+Yet these mechanics remain to be fully understood by the authors and can only be labeled as a conjecture for the moment being.
 
-\section{Mean Square Distortion}
+\section{Mean Square Distortion and Bragg peak}
+While the one-constant approximation \eqref{eq:OseenFrankOne} is well known to be of limited use, so much so that it is sometimes called the poor-man energy functional\cite{dGJ}, \eqref{eq:OseenFrankOne} might provide qualitative information on the relation between the geometry of the microscopic constituents and microscopic behavior of a calamitic liquid fluid.
+Assuming that the sample of calamitic fluid can be treated to good approximation as two-dimensional, we can introduce an angle $\theta:\mathbb{R}^2\to [0,2\pi)$ describing the average orienatation of the calamitic constituents inplace of the nematic vector $\vec{n}$. Rewriting \eqref{eq:OseenFrankOne} in the frequency domain we obtain,
+\begin{equation}
+  \label{eq:frequencyDomain}
+  \mathcal{I}[\theta] = \int \frac{\lambda}{2(2\pi)^3} p \abs{\theta(\xi)}^2 \xi^2 \,d\xi.
+\end{equation}
+Using the equipartition of energy theorem we have,
+\begin{equation}
+  k_BT = \lambda \xi^2 p \cchevrons{\abs{\theta(\xi)}^2},
+\end{equation}
+transforming back from the frequency domain the previous equation yields
+\begin{equation}
+  \label{eq:meanSquareDistortion}
+  \mathbb{E}\left[\abs{\theta(\vec{x})}^2\right] = \frac{2}{(2\pi)^3}\frac{k_B T}{\lambda p} \int_{L^{-1}}^{\xi_c}\xi^{-2}\,d\vec{\xi}=\frac{k_B T}{\lambda p}\xi_c,
+\end{equation}
+where $\xi_c \approx 2\cdot 10^{-7} \,cm^{-1}$ is the largest wave vector after which the linear elastic theory breaks down and $L$ is the sample size.
+What \eqref{eq:meanSquareDistortion} is suggesting is that as the molecular constituents of a calamitic fluid get more elongated $\lambda$ increases quadratically causing the mean-square distortion to decrease at the same rate.
+Likewise, \eqref{eq:meanSquareDistortion} suggests that the mean-square distortion decreases linearly with the pressure.
+
+We would like to briefly comment on these observations.
+As molecules get more elongated they are less free to move, in fact for extremely elongated molecules even a small change in the orientation will result in many molecules overlapping with each other.
+This is the reason why the mean-square distortion decreases as the molecular constituents get more elongated. 
+The effect of the pressure on the mean-square distortion is more subtle to explain, yet we can imagine that as the pressure increases the molecules are packed closer to each other hence even if the overall space that can be occupied by the molecules increases a slight change in the orientation of a molecule will result in a greater number of molecules overlapping with each other.
+
+The consequences of the microscopic geometric of the calamitic constituents on the macroscopic behavior of the fluid are not only limited to the mean-square distortion. In fact, once the nematic phase is established we can assume the density $\rho$ of the calamitic fluid has a periodic modulation, i.e. 
+\begin{equation}
+  \rho(\vec{x}) = \rho_0 + \rho_1\cos(\vec{n}_0\cdot \vec{x}+\theta),
+\end{equation}
+where $\rho_0$ is the isotropic density, $\rho_1$ is the amplitude of the modulation which is related to the geometry of the calamitic constituents, $\vec{n}_0$ is a reference director field.
+A common quantity of interest in statistical mechanics is the variance of the density, i.e.
+\begin{align}
+  \sigma &\coloneqq \mathbb{E}_{\vec{x},\vec{x}'}\left[\rho(x)\rho(\vec{x}')\right] - \mathbb{E}_{x,x'}\left[\rho(x)^2\right]  \nonumber \\
+  &\approx \cos\left(\vec{n}_0\cdot (\vec{x}-\vec{x}')\right)\exp\left(-\mathbb{E}_{x,x'}\left[\theta(\vec{x})-\theta(\vec{x}')\right]\right),
+\end{align}
+where we can compute $\mathbb{E}_{\vec{x},\vec{x}'} \left[\theta(\vec{x})-\theta(\vec{x}')\right]^2$ using \eqref{eq:meanSquareDistortion} to obtain,
+\begin{equation}
+  \label{eq:correlation}
+  \sigma \approx \cos(\vec{n}_0\cdot(\vec{x}-\vec{x}'))\exp\left(-\frac{\xi_c^2}{\beta \lambda p}\right).
+\end{equation}
+It is well known that calamitic fluid will exhibit a Bregg peak in the direction of the nematic field, in particular, \eqref{eq:correlation} reveals that the attenuation in the Bragg peak depends on both the pressure and the geometry of the calamitic molecules.
 \bibliography{aipsamp}
 \end{document}

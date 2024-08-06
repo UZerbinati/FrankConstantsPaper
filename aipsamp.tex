@@ -65,6 +65,7 @@
 
 \title[]{A kinetic interpretation of the Frank's constants in calamitic fluids}
 % Force line breaks with \\
+\author{P. E. Farrell}
 \author{U. Zerbinati}
  %\altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
 %\author{B. Author}%
@@ -233,7 +234,7 @@ Intuitively one can imagine that at higger temperatures in order to maximize the
 Yet these mechanics remain to be fully understood by the authors and can only be labeled as a conjecture for the moment being.
 
 \section{Mean Square Distortion and Bragg peak}
-While the one-constant approximation \eqref{eq:OseenFrankOne} is well known to be of limited use, so much so that it is sometimes called the poor-man energy functional\cite{dGJ}, \eqref{eq:OseenFrankOne} might provide qualitative information on the relation between the geometry of the microscopic constituents and microscopic behavior of a calamitic liquid fluid.
+While the one-constant approximation \eqref{eq:OseenFrankOne} is well known to be of limited use, so much so that it is sometimes called the poor-man energy functional\cite{dGJ}, \eqref{eq:OseenFrankOne} might provide qualitative information on the relation between the geometry of the microscopic constituents and macroscopic behavior of a calamitic liquid fluid.
 Assuming that the sample of calamitic fluid can be treated to good approximation as two-dimensional, we can introduce an angle $\theta:\mathbb{R}^2\to [0,2\pi)$ describing the average orienatation of the calamitic constituents inplace of the nematic vector $\vec{n}$. Rewriting \eqref{eq:OseenFrankOne} in the frequency domain we obtain,
 \begin{equation}
   \label{eq:frequencyDomain}
@@ -264,14 +265,25 @@ The consequences of the microscopic geometric of the calamitic constituents on t
 where $\rho_0$ is the isotropic density, $\rho_1$ is the amplitude of the modulation which is related to the geometry of the calamitic constituents, $\vec{n}_0$ is a reference director field.
 A common quantity of interest in statistical mechanics is the variance of the density, i.e.
 \begin{align}
-  \sigma &\coloneqq \mathbb{E}_{\vec{x},\vec{x}'}\left[\rho(x)\rho(\vec{x}')\right] - \mathbb{E}_{x,x'}\left[\rho(x)^2\right]  \nonumber \\
-  &\approx \cos\left(\vec{n}_0\cdot (\vec{x}-\vec{x}')\right)\exp\left(-\mathbb{E}_{x,x'}\left[\theta(\vec{x})-\theta(\vec{x}')\right]\right),
+  \sigma&\approx \mathbb{E}_{\vec{x},\vec{x}'}\left[\rho(x)\rho(\vec{x}')\right] - \mathbb{E}_{x,x'}\left[\rho(\vec{x})^2\right]\\
+  &\approx \cos\left(\vec{n}_0\cdot (\vec{x}-\vec{x}')\right)\exp\left(-\mathbb{E}_{\theta,\theta'}\left[\theta(\vec{x})-\theta(\vec{x}')\right]\right),
 \end{align}
-where we can compute $\mathbb{E}_{\vec{x},\vec{x}'} \left[\theta(\vec{x})-\theta(\vec{x}')\right]^2$ using \eqref{eq:meanSquareDistortion} to obtain,
+where we can compute $\mathbb{E}_{\vec{\theta},\vec{\theta}'} \left[\theta(\vec{x})-\theta(\vec{x}')\right]^2$ using \eqref{eq:meanSquareDistortion} to obtain,
 \begin{equation}
   \label{eq:correlation}
-  \sigma \approx \cos(\vec{n}_0\cdot(\vec{x}-\vec{x}'))\exp\left(-\frac{\xi_c^2}{\beta \lambda p}\right).
+  \sigma \approx \cos(\vec{n}_0\cdot(\vec{x}-\vec{x}'))\exp\left(-\frac{\xi_c^2}{\beta \lambda p}\abs{\vec{x}-\vec{x}'}\right).
 \end{equation}
+Equation \eqref{eq:correlation} reveals the well-known fact that nematic liquid crystals exhibit orientational long-range ordering.
+In particular, \eqref{eq:correlation} suggests that the long-range ordering becomes greater as the pressure increases and as the molecular constituents get more elongated.
+This should come with no surprise since it is well-known that the more elongated the constituent molecules are the more likely the calamitic fluid will exhibit a nematic phase\cite{O71}.
+Furthermore, it is well known that at higger pressure the nematic phase is more stable since higger temperature is required for the calamitic fluid to transit to the isotropic phase\cite{DCJ71}.
+
 It is well known that calamitic fluid will exhibit a Bregg peak in the direction of the nematic field, in particular, \eqref{eq:correlation} reveals that the attenuation in the Bragg peak depends on both the pressure and the geometry of the calamitic molecules.
+In particular, via equation \eqref{eq:correlation} we can predict that as the calamitic constituents get more elongated the Bragg peak will be more pronounced and the Debye--Waller factor will be greater.
+Likewise, as the pressure increases the Bragg peak will be more pronounced and the Debye--Waller factor will be greater.
+It is worth pointing out that while experimentally the relation between the temperature and the Bragg peak attenuation has been the subject of many studies\cite{VetAll79}, the same can not be said for the pressure and molecular geometry dependence of the Bragg peak attenuation.
+In fact, if one assumes that a relation like \eqref{eq:virialExp} positive correlates pressure and the temperature, experimental evidence that suggests a greater attenuation in the Bragg peak as the temperature increases\cite{VetAll79} should also indicate that the Bragg peak attenuation should be greater as the pressure increases.
+Yet as we have seen in the previous section the pressure and temperature are decoupled in nearly incompressible fluids, hence the attenuation in the Debye--Waller factor should be greater as the pressure increases and the temperature remains constant.
+\section{A Density Functional Point of View}
 \bibliography{aipsamp}
 \end{document}
